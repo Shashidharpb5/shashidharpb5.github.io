@@ -2,18 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shashidhar's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007bff;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Hi, I'm Shashidhar!</h1>
-    <p>AI & ML Enthusiast | B.Tech Student</p>
+    <h1>Hi, I'm Shashidhar</h1>
+    <p>AI & ML Enthusiast | B.Tech Student at CMR Engineering College</p>
   </header>
-  <section>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
     <h2>About Me</h2>
-    <p>Welcome to my portfolio. Here I showcase my projects and skills.</p>
+    <p>
+      I'm a third-year B.Tech student in Artificial Intelligence & Machine Learning at 
+      CMR Engineering College, Hyderabad. With a CGPA of 7.87, I enjoy building 
+      real-time AI applications and automating processes. I'm currently working on 
+      exciting projects that blend rule-based systems and machine learning, and I'm always 
+      learning something new!
+    </p>
   </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <strong>💰 Personal Expense Tracker with Data Visualization</strong><br>
+        A desktop application built using Python, Tkinter, SQLite, and Matplotlib to track 
+        and visualize personal spending habits.  
+        <a href="https://github.com/shashidharpb5/expense-tracker" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <strong>🌿 Automatic Plant Watering System</strong><br>
+        A real-time IoT project that automatically waters plants based on soil moisture 
+        levels. Designed with Arduino and sensors.  
+        <a href="https://github.com/shashidharpb5/plant-watering-system" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <strong>🤖 AI Chatbot using Rule-Based + NLP Techniques</strong><br>
+        Built a chatbot combining rule-based responses with natural language processing 
+        techniques in Python.  
+        <a href="https://github.com/shashidharpb5/ai-chatbot-nlp" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <strong>📚 AI-Powered Q&A Bot</strong><br>
+        (In Progress) A smart assistant that answers user questions from documents or webpages 
+        using Google Gemini models.  
+        <a href="https://github.com/shashidharpb5/qa-bot" target="_blank">GitHub</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>
+      <a href="Pinnamshetty_Shashidhar_Resume.docx" class="btn" download>Download My Resume (PDF)</a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:228r1a66b5@gmail.com">228r1a66b5@gmail.com</a></p>
+    <p>Phone: 8247733716</p>
+    <p>
+      <a href="https://github.com/shashidharpb5" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/shashidharpb5" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Pinnamshetty Shashidhar. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
