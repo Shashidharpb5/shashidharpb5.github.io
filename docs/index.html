@@ -71,6 +71,23 @@
     .btn:hover {
       background: #0056b3;
     }
+    /* New styles for project screenshots */
+    .project-img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin: 10px 0 15px 0;
+    }
+    .project-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 600;
+    }
+    .project-links a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -103,9 +120,13 @@
     <ul>
       <li>
         <strong>💰 Personal Expense Tracker with Data Visualization</strong><br>
-        A desktop application built using Python, Tkinter, SQLite, and Matplotlib to track 
-        and visualize personal spending habits.  
-        <a href="https://github.com/shashidharpb5/expense-tracker" target="_blank">GitHub</a>
+        A web-based application developed using <strong>Python</strong>, <strong>Streamlit</strong>, <strong>Pandas</strong>, and <strong>SQLite</strong> to track, categorize, and visualize daily expenses. Includes interactive bar and pie charts for insightful expense analysis.<br>
+        <img src="assets/screenshots/summary.png" alt="Expense Tracker Summary Screenshot" class="project-img"><br>
+        <div class="project-links">
+          <a href="https://github.com/shashidharpb5/personal-expense-tracker" target="_blank">GitHub Repository</a>
+          <!-- Uncomment below if you deploy a live demo -->
+          <!-- <a href="https://shashidharpb5-personal-expense-tracker.streamlit.app/" target="_blank">Live Demo</a> -->
+        </div>
       </li>
       <li>
         <strong>🌿 Automatic Plant Watering System</strong><br>
