@@ -106,7 +106,17 @@
     /* subtle reveal */
     .reveal{opacity:0;transform:translateY(12px);transition:opacity 600ms ease, transform 600ms ease}
     .reveal.show{opacity:1;transform:none}
-  </style>
+  
+/* ====== V2 Reveal, Hover, Dark Mode ====== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.show{opacity:1;transform:none;}
+.project,.contact-card,.card{transition:transform .22s ease,box-shadow .22s ease;}
+.project:hover,.contact-card:hover,.card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(124,58,237,.25);}
+.hover-glow:hover{background:linear-gradient(90deg,#7c3aed,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;}
+:root.light{--text:#0f172a;--muted:#475569;}
+body.light{background:#f8fafc;color:var(--text);}
+
+</style>
 </head>
 <body>
   <div class="wrap">
@@ -128,7 +138,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="reveal" class="hero">
         <div class="hero-left">
           <h1>Final-Year B.Tech (AI & ML) — Pinnamshetty Shashidhar</h1>
           <div class="tagline">Final-Year B.Tech (AI & ML) | Python | ML & DL Enthusiast | Building Real-World AI Projects | Open to Opportunities</div>
@@ -359,5 +369,19 @@
     // tiny performance: defer heavy things
     window.addEventListener('load', ()=>{document.body.style.opacity=1});
   </script>
+
+<script>
+// Reveal
+const rv=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(xs=>xs.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.18});
+rv.forEach(r=>io.observe(r));
+// Dark mode
+const t=document.getElementById('themeToggle');
+let m=localStorage.getItem('theme')||'dark';
+apply(m);
+t&&t.addEventListener('click',()=>{m=m==='dark'?'light':'dark';apply(m);localStorage.setItem('theme',m);});
+function apply(m){document.documentElement.classList.toggle('light',m==='light');document.body.classList.toggle('light',m==='light');if(t)t.textContent=m==='light'?'☀️':'🌙';}
+</script>
+
 </body>
 </html>
